@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prebuild": "npx tailwindcss -i src/styles.scss -o src/styles.css --content 'src/**/*.{html,ts}'",
+    "prestart": "npx tailwindcss -i src/styles.scss -o src/styles.css --content 'src/**/*.{html,ts}'",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
@@ -32,8 +34,10 @@
     "@angular/platform-server": "^21.1.0",
     "@angular/router": "^21.1.0",
     "@angular/ssr": "^21.1.0",
+    "@types/three": "^0.183.1",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
+    "three": "^0.183.2",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
@@ -42,7 +46,10 @@
     "@angular/compiler-cli": "^21.1.0",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
+    "autoprefixer": "^10.4.27",
     "jsdom": "^27.1.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
   }
